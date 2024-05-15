@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h3>Lista De Películas</h3>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Género</th>
+                        <th>Duración</th>
+                        <th>Descripción</th>
+                        <th>Actores</th>
+                        <th>Directores</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let v of peliculas">
+                        <td>{{v.nombre}}</td>
+                        <td>{{v.genero}}</td>
+                        <td>{{v.duracion}}</td>
+                        <td>{{v.descripcion}}</td>
+                        <td>{{v.actores}}</td>
+                        <td>{{v.directores}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" (click)="onEditarNavigate(v.id)" title="Editar">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
